@@ -19,3 +19,28 @@ house = [["hallway", 11.25],
          
 for x in house:
     print("the " + x[0] + "is " + str(x[1])+ " sqm")
+
+
+# Loop over dictionary
+    # for key, val in my_dict.items
+europe = {'spain':'madrid', 'france':'paris', 'germany':'berlin',
+          'norway':'oslo', 'italy':'rome', 'poland':'warsaw', 'austria':'vienna' }
+          
+for key, value in europe.items() :
+    print("the capital of " + key + " is " + str(value))
+
+
+# Loop over numpy array
+    # for val in np.nditer(my_array)
+    
+# Loop over numpy dataframe
+    # for lab, row in brics.iterrows() :
+    
+
+# Adding column of data for each row of dataframe
+    # Apply method: 
+        # cars["COUNTRY"] = cars["country"].apply(str.upper)
+    
+    # For loop method:
+        # for lab, row in cars.iterrows():
+            # cars.loc[lab, "COUNTRY"] = row["country"].upper()
