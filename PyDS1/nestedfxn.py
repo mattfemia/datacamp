@@ -1,7 +1,7 @@
 # Nested Function: basic
 
 def mod2plus5(x1, x2, x3):
-    """Returns the remained plus 5 of three values"""
+    """Returns the remainder plus 5 of three values"""
     
     def inner(x):
         """Returns the remainder plus 5 of a value"""

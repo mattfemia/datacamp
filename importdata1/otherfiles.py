@@ -19,9 +19,19 @@
 
 # Import pandas
 import pandas as pd
+import numpy as np
 
 # Assign spreadsheet filename: file
 file = "battledeath.xlsx"
+
+
+xl = pd.ExcelFile(file)
+  
+print(xl.sheet_names)
+
+df1 = xl.parse("2004")
+
+print(df1)         
 
 # Load spreadsheet: xl
 xl = pd.ExcelFile(file)
@@ -52,3 +62,5 @@ df2 = xl.parse(1, parse_cols=[0], skiprows=[0], names=['Country'])
 
 # Print the head of the DataFrame df2
 print(df2.head())
+   
+
