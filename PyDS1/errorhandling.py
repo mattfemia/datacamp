@@ -86,11 +86,11 @@ def count_entries(df, col_name='lang'):
     except:
         "The DataFrame does not have a ' + col_name + ' column.'"
 
-# Call count_entries(): result1
-result1 = count_entries(tweets_df, 'lang')
+# # Call count_entries(): result1
+# result1 = count_entries(tweets_df, 'lang')
 
-# Print result1
-print(result1)
+# # Print result1
+# print(result1)
 
 
 
@@ -125,9 +125,9 @@ def count_entries(df, col_name='lang'):
         # Return the cols_count dictionary
     return cols_count
 
-# Call count_entries(): result1
-result1 = count_entries(tweets_df, 'lang')
+# # Call count_entries(): result1
+# result1 = count_entries(tweets_df, 'lang')
 
-# Print result1
-print(result1)
+# # Print result1
+# print(result1)
 
