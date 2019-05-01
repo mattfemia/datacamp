@@ -97,6 +97,6 @@ three_counties = pd.DataFrame(election.loc[rows, cols])
 print(three_counties)
 
 
-#6
+#6 Advanced 
 
 #Filtering with boolean series
