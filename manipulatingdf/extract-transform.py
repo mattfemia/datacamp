@@ -97,6 +97,60 @@ three_counties = pd.DataFrame(election.loc[rows, cols])
 print(three_counties)
 
 
-#6 Advanced 
 
-#Filtering with boolean series
+
+#6 Filtering data with Boolean expression 
+
+# Create the boolean array: high_turnout
+high_turnout = election.loc[:, 'turnout'] > 70
+
+# Filter the election DataFrame with the high_turnout array: high_turnout_df
+high_turnout_df = election.loc[high_turnout]
+
+# Print the high_turnout_results DataFrame
+print(high_turnout_df)
+
+
+
+
+#7 Filtering columns using other columns
+
+# Import numpy
+import numpy as np
+
+# Create the boolean array: too_close
+too_close = election['margin'] < 1
+
+# Assign np.nan to the 'winner' column where the results were too close to call
+election.loc[too_close, 'winner'] = np.nan
+
+# Print the output of election.info()
+print(election.info())
+
+
+
+
+#8 Filtering using NaNs
+
+file = "titanic.csv"
+titanic = pd.read_csv(file)
+
+# Select the 'age' and 'cabin' columns: df
+df = titanic.loc[:, ['age','cabin']]
+
+# Print the shape of df
+print(df.shape)
+
+# Drop rows in df with how='any' and print the shape
+print(df.dropna(how='any').shape)
+
+# Drop rows in df with how='all' and print the shape
+print(df.dropna(how='all').shape)
+
+# Drop columns in titanic with less than 1000 non-missing values
+print(titanic.dropna(thresh=1000, axis='columns').info())
+
+
+
+
+
