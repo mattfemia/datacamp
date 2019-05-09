@@ -57,3 +57,10 @@ election['turnout_zscore'] = turnout_zscore
 
 # Print the output of election.head()
 print(election.head())
+
+
+
+turnout_fred = zscore(election['turnout']) + 1
+election['turnout_fred'] = turnout_fred
+
+print(election.head())
